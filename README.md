@@ -9,6 +9,8 @@ icon: hand-wave
 
 YAPD is a self-hosted dashboard for people who run more than one Pi-hole instance and want a clearer, safer way to operate them from one place.
 
+YAPD is an independent third-party project. It is not affiliated with, endorsed by, or sponsored by Pi-hole, LLC; "Pi-hole" is referenced only to identify compatibility with Pi-hole installations.
+
 Use these docs to install YAPD, complete the first setup, understand each screen, troubleshoot common errors, and use the special **Overview** screen for historical DNS analysis.
 
 {% hint style="warning" %}

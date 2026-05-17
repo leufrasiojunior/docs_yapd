@@ -35,7 +35,7 @@ Add one or more Pi-hole URLs. For each row, provide an alias, protocol, host, po
 {% step %}
 ### Choose the master Pi-hole 👑
 
-Select the Pi-hole that should become the official YAPD baseline. The baseline is the main reference for login and several sync comparisons.
+Select the Pi-hole that should become the primary YAPD baseline. The baseline is the main reference for login and several sync comparisons.
 {% endstep %}
 
 {% step %}
@@ -61,7 +61,7 @@ Review the choices and finish the wizard. YAPD validates the Pi-hole connections
 
 | Mode | What it means | When to use it |
 | --- | --- | --- |
-| **Master Pi-hole password** | YAPD uses the official Pi-hole v6 login flow through the master Pi-hole. | You want the human login to follow the Pi-hole password. |
+| **Master Pi-hole password** | YAPD uses the native Pi-hole v6 login flow through the master Pi-hole. | You want the human login to follow the Pi-hole password. |
 | **YAPD password** | YAPD stores a hashed product password for human login. | You want operators to sign in without using the Pi-hole password. |
 
 {% hint style="info" %}
