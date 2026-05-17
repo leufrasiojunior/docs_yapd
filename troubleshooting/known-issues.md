@@ -1,36 +1,36 @@
 ---
-description: Known rough edges and current limitations to keep in mind.
+description: Limitações e pontos conhecidos para manter em mente.
 icon: bug
 ---
 
-# Known issues 🐞
+# Erros conhecidos 🐞
 
-YAPD is active, early software. These are known limitations or behaviors worth remembering.
+O YAPD é um software em evolução. Estes são comportamentos e limitações que vale lembrar.
 
-## Intermittent Pi-hole reachability 🌐
+## Alcance intermitente do Pi-hole 🌐
 
-YAPD can sometimes lose connection to a Pi-hole instance, fail to locate it, or briefly show it as unreachable. In some cases the instance recovers shortly after without a manual restart.
+Às vezes o YAPD pode perder conexão com uma instância Pi-hole, não conseguir localizá-la ou exibir rapidamente que ela está inalcançável. Em alguns casos, a instância se recupera pouco depois sem reinício manual.
 
-What to do:
+O que fazer:
 
-* wait briefly and refresh the affected screen;
-* check **Instances** for the last error;
-* test the instance connection;
-* review **Notifications** for the clearer failure reason;
-* collect logs if the issue repeats.
+* aguarde um pouco e atualize a tela afetada;
+* confira **Instâncias** para ver o último erro;
+* teste a conexão da instância;
+* revise **Notificações** para entender o motivo com mais clareza;
+* colete logs se o problema se repetir.
 
-## Overview depends on imported history 📊
+## Overview depende de histórico importado 📊
 
-Overview can feel empty after a fresh install because it only analyzes data saved in YAPD's local database. Import a closed day before expecting rankings or charts.
+O Overview pode parecer vazio depois de uma instalação nova porque ele analisa apenas dados salvos no banco local do YAPD. Importe um dia fechado antes de esperar rankings ou gráficos.
 
-## On-disk query mode is slower 💿
+## Modo on-disk de queries é mais lento 💿
 
-Queries Log can request older data from Pi-hole's on-disk database, but this mode is slower and disables live updates.
+O Queries Log pode consultar dados mais antigos no banco em disco do Pi-hole, mas esse modo é mais lento e desativa atualizações ao vivo.
 
-## Push notifications require real HTTPS 🔔
+## Push exige HTTPS real 🔔
 
-Push notifications usually do not work through direct HTTP access by IP address or through self-signed public browser certificates. Use a trusted HTTPS domain.
+Notificações push normalmente não funcionam por acesso HTTP direto via IP ou por certificados públicos autoassinados no navegador. Use um domínio HTTPS confiável.
 
-## Some workflows are still evolving 🚧
+## Alguns fluxos ainda estão evoluindo 🚧
 
-YAPD's roadmap includes stronger backup, realtime operation visibility, improved health diagnostics, and future parental-control features. Treat visible beta warnings seriously when operating production Pi-hole instances.
+O roadmap do YAPD inclui backup mais forte, visibilidade operacional em tempo real, diagnósticos melhores de saúde e futuros recursos de controle parental. Leve os avisos beta a sério ao operar instâncias Pi-hole de produção.

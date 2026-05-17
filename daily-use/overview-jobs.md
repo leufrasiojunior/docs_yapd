@@ -1,67 +1,67 @@
 ---
-description: Follow Overview imports, deletions, retries, cancellations, and job details.
+description: Acompanhe importações, deleções, retries, cancelamentos e detalhes de jobs do Overview.
 icon: list-checks
 ---
 
 # Jobs ⚙️
 
-Jobs shows the background work created by Overview imports and deletions.
+Jobs mostra o trabalho em segundo plano criado por importações e deleções do Overview.
 
-![YAPD Overview jobs](../.gitbook/assets/screenshots/overview.png)
+![Jobs do Overview](../.gitbook/assets/screenshots/overview.png)
 
-## Why jobs exist 🧠
+## Por que jobs existem 🧠
 
-Historical imports can take time, especially across multiple Pi-hole instances. YAPD keeps this work in the background so Overview remains usable while the job runs.
+Importações históricas podem levar tempo, especialmente com múltiplas instâncias Pi-hole. O YAPD mantém esse trabalho em segundo plano para que o Overview continue utilizável enquanto o job roda.
 
-## Job statuses 🚦
+## Status de jobs 🚦
 
-| Status | Meaning |
+| Status | Significado |
 | --- | --- |
-| **Queued** | Waiting to start. |
-| **Running** | Import or deletion is in progress. |
-| **Paused** | Execution paused after repeated failures. |
-| **Cancelled** | Cancelled before it started. |
-| **Success** | Completed with usable results. |
-| **Partial** | Completed, but one or more instances had gaps or failures. |
-| **Failure** | Finished without usable results. |
+| **Na fila** | Esperando para iniciar. |
+| **Em execução** | Importação ou deleção em andamento. |
+| **Pausado** | Execução pausada depois de falhas repetidas. |
+| **Cancelado** | Cancelado antes de iniciar. |
+| **Sucesso** | Concluiu com resultados utilizáveis. |
+| **Parcial** | Concluiu, mas uma ou mais instâncias tiveram lacunas ou falhas. |
+| **Falha** | Terminou sem resultados utilizáveis. |
 
-## Actions 🛠️
+## Ações 🛠️
 
-Depending on the status, you can:
+Dependendo do status, você pode:
 
-* open the imported period in Ranking;
-* view details;
-* retry failed, paused, partial, or cancelled jobs;
-* cancel queued jobs;
-* delete old job records and linked Overview history.
+* abrir o período importado no Ranking;
+* ver detalhes;
+* tentar novamente jobs com falha, pausados, parciais ou cancelados;
+* cancelar jobs enfileirados;
+* apagar registros antigos de job e histórico do Overview vinculado.
 
 {% hint style="warning" %}
-⚠️ Deleting a successful, partial, paused, failed, or cancelled job can remove historical data linked to that job.
+⚠️ Apagar um job bem-sucedido, parcial, pausado, com falha ou cancelado pode remover dados históricos vinculados a esse job.
 {% endhint %}
 
-## Job details 🔎
+## Detalhes do job 🔎
 
-The details modal includes:
+O modal de detalhes inclui:
 
-* summary;
-* scope;
-* origin, such as manual or automatic import;
-* period;
-* expected and saved totals;
-* attempts;
-* progress percentage;
-* primary failure reason;
-* per-instance progress;
-* timeline events.
+* resumo;
+* escopo;
+* origem, como importação manual ou automática;
+* período;
+* totais esperados e salvos;
+* tentativas;
+* percentual de progresso;
+* motivo principal de falha;
+* progresso por instância;
+* linha do tempo de eventos.
 
-Use this modal when an import fails or only partially completes.
+Use esse modal quando uma importação falhar ou concluir apenas parcialmente.
 
-## Common failure reasons 🧯
+## Motivos comuns de falha 🧯
 
-| Reason | What to check |
+| Motivo | O que conferir |
 | --- | --- |
-| **Timeout** | Instance availability, latency, or proxy behavior. |
-| **Session error** | Reauthenticate the instance. |
-| **Server unavailable** | Check whether the Pi-hole is online. |
-| **Count mismatch** | Retry and compare the affected period. |
-| **Unexpected failure** | Review details and YAPD logs. |
+| **Timeout** | Disponibilidade da instância, latência ou comportamento do proxy. |
+| **Session error** | Reautentique a instância. |
+| **Server unavailable** | Confira se o Pi-hole está online. |
+| **Count mismatch** | Tente novamente e compare o período afetado. |
+| **Unexpected failure** | Revise os detalhes e os logs do YAPD. |

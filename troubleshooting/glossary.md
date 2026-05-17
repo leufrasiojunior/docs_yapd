@@ -1,54 +1,54 @@
 ---
-description: Short definitions for common words used in YAPD.
+description: Definições curtas para termos comuns usados no YAPD.
 icon: book-open
 ---
 
-# Glossary 📖
+# Glossário 📖
 
 ## Ad-list 🧾
 
-A Pi-hole list source used to block or allow domains.
+Fonte de lista do Pi-hole usada para bloquear ou permitir domínios.
 
 ## Baseline 👑
 
-The primary Pi-hole reference used by YAPD for login authority and several comparisons.
+Pi-hole principal de referência usado pelo YAPD como autoridade de login e para várias comparações.
 
 ## Blocking 🛑
 
-The Pi-hole filtering state that determines whether DNS blocking is enabled.
+Estado de filtragem do Pi-hole que determina se o bloqueio DNS está ativo.
 
-## Client 📱
+## Cliente 📱
 
-A device seen by Pi-hole, usually identified by MAC address, IP address, alias, or hostname.
+Dispositivo visto pelo Pi-hole, normalmente identificado por MAC, IP, alias ou hostname.
 
-## Coverage 📆
+## Cobertura 📆
 
-The historical period already saved in YAPD's local database for Overview.
+Período histórico já salvo no banco local do YAPD para o Overview.
 
 ## Drift 🧭
 
-A difference between a source instance and another instance, or between expected and actual state.
+Diferença entre uma instância de origem e outra instância, ou entre estado esperado e estado real.
 
-## Instance 🧱
+## Instância 🧱
 
-One Pi-hole registered in YAPD.
+Um Pi-hole cadastrado no YAPD.
 
 ## Overview 📊
 
-The YAPD screen for historical analysis based on locally stored query data.
+Tela do YAPD para análise histórica baseada em consultas salvas localmente.
 
 ## Query 🔎
 
-A DNS request handled by Pi-hole.
+Consulta DNS processada pelo Pi-hole.
 
-## Scope 🎯
+## Escopo 🎯
 
-The selected universe of data: all instances or one instance.
+Universo de dados selecionado: todas as instâncias ou uma instância.
 
 ## Sync 🔁
 
-An operation that copies selected data from a source to one or more target instances.
+Operação que copia dados selecionados de uma origem para uma ou mais instâncias de destino.
 
 ## Teleporter ZIP 📦
 
-A Pi-hole export package downloaded from the Configuration screen.
+Pacote de exportação do Pi-hole baixado pela tela Configurações.

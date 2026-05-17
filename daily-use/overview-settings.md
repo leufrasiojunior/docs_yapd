@@ -1,44 +1,44 @@
 ---
-description: Schedule recurring Overview imports for closed days.
+description: Agende importações recorrentes do Overview para dias fechados.
 icon: settings
 ---
 
-# Overview settings ⏰
+# Configurações do Overview ⏰
 
-Overview settings lets you create automatic import rules that queue historical collection jobs.
+Configurações do Overview permite criar regras de importação automática que enfileiram jobs de coleta histórica.
 
-![YAPD Overview settings](../.gitbook/assets/screenshots/overview.png)
+![Configurações do Overview](../.gitbook/assets/screenshots/overview.png)
 
-## What automatic import does 🤖
+## O que a importação automática faz 🤖
 
-An automatic rule schedules Overview collection. The rule decides when to run, but the imported window remains the complete previous closed day in the application-configured time zone.
+Uma regra automática agenda a coleta do Overview. A regra decide quando rodar, mas a janela importada continua sendo o dia anterior completo no fuso horário configurado na aplicação.
 
-Example: a daily rule at `03:00` imports the completed `d-1` day.
+Exemplo: uma regra diária às `03:00` importa o dia `d-1` completo.
 
-## Rule fields 📝
+## Campos da regra 📝
 
-| Field | Meaning |
+| Campo | Significado |
 | --- | --- |
-| **Name** | Friendly name for the rule. |
-| **Enabled** | Disabled rules stay saved but do not schedule jobs. |
-| **Instance** | Choose all instances or one specific instance. |
-| **Preset** | Use daily or hourly presets, or provide a custom cron expression. |
-| **Cron** | The final schedule expression used by the rule. |
+| **Nome** | Nome amigável da regra. |
+| **Ativa** | Regras desativadas continuam salvas, mas não agendam jobs. |
+| **Instância** | Escolha todas as instâncias ou uma instância específica. |
+| **Preset** | Use presets diários ou horários, ou informe uma expressão cron customizada. |
+| **Cron** | Expressão final de agendamento usada pela regra. |
 
-## Presets ⚡
+## Presets de agendamento ⚡
 
-Available presets include:
+Os presets disponíveis incluem:
 
-* every day at `03:00`;
-* every day at `00:00`;
-* every day at `06:00`;
-* every hour;
-* custom expression.
+* todos os dias às `03:00`;
+* todos os dias às `00:00`;
+* todos os dias às `06:00`;
+* a cada hora;
+* expressão customizada.
 
 {% hint style="info" %}
-📌 Automatic imports appear in [Jobs](overview-jobs.md), just like manual imports.
+📌 Importações automáticas aparecem em [Jobs](overview-jobs.md), assim como importações manuais.
 {% endhint %}
 
-## When to use it ✅
+## Quando usar ✅
 
-Use automatic imports when you want Overview rankings to be ready every day without manually importing the previous day.
+Use importações automáticas quando quiser que rankings do Overview estejam prontos todos os dias sem precisar importar o dia anterior manualmente.

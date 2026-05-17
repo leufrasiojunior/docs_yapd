@@ -1,54 +1,54 @@
 ---
-description: Understand the YAPD Overview screen and how it differs from Dashboard and Queries Log.
+description: Entenda a tela Overview do YAPD e como ela difere do Dashboard e do Queries Log.
 icon: activity
 ---
 
 # Overview 📊
 
-Overview is YAPD's historical analysis screen. It reads query history stored in YAPD's local database, then turns that history into coverage, rankings, charts, and background job visibility.
+Overview é a tela de análise histórica do YAPD. Ela lê histórico de queries salvo no banco local do YAPD e transforma esse histórico em cobertura, rankings, gráficos e visibilidade de jobs em segundo plano.
 
-![YAPD Overview](../.gitbook/assets/screenshots/overview.png)
+![Overview do YAPD](../.gitbook/assets/screenshots/overview.png)
 
-Open it from the sidebar as **Overview** or go directly to `/overview`.
+Abra pela sidebar em **Overview** ou acesse diretamente `/overview`.
 
-## Why Overview is different 🧠
+## Por que o Overview é diferente 🧠
 
-Dashboard and Queries Log are closer to live Pi-hole activity. Overview is different because it works with imported historical data.
+Dashboard e Queries Log ficam mais próximos da atividade ao vivo do Pi-hole. O Overview é diferente porque trabalha com dados históricos importados.
 
-That means:
+Isso significa que:
 
-* you request imports for closed days;
-* YAPD stores the historical rows locally;
-* rankings and charts use only the stored data;
-* background jobs keep running without blocking the screen;
-* you can inspect progress, failures, retries, and deletions.
+* você solicita importações de dias fechados;
+* o YAPD salva as linhas históricas localmente;
+* rankings e gráficos usam apenas os dados salvos;
+* jobs em segundo plano continuam rodando sem bloquear a tela;
+* você pode inspecionar progresso, falhas, retries e deleções.
 
 {% hint style="info" %}
-📌 If Overview is empty after a fresh install, that usually means no historical day has been imported yet.
+📌 Se o Overview estiver vazio depois de uma instalação nova, normalmente ainda não há nenhum dia histórico importado.
 {% endhint %}
 
-## Tabs in Overview 🧭
+## Abas do Overview 🧭
 
-Overview has four tabs:
+O Overview tem quatro abas:
 
-| Tab | Use it for |
+| Aba | Use para |
 | --- | --- |
-| **Period and coverage** | Request a manual import, delete a stored period, and review what history is available. |
-| **Ranking** | Analyze domains, clients, upstreams, statuses, hourly distribution, and filtered periods. |
-| **Jobs** | Follow background imports and deletions, including progress and failures. |
-| **Settings** | Create automatic import rules for recurring historical collection. |
+| **Período e cobertura** | Solicitar importação manual, apagar um período salvo e revisar qual histórico está disponível. |
+| **Ranking** | Analisar domínios, clientes, upstreams, status, distribuição por hora e períodos filtrados. |
+| **Jobs** | Acompanhar importações e deleções em segundo plano, incluindo progresso e falhas. |
+| **Configurações** | Criar regras de importação automática para coleta histórica recorrente. |
 
-The selected tab can also be reflected in the URL, for example `/overview?tab=ranking` or `/overview?tab=jobs`.
+A aba selecionada também pode aparecer na URL, por exemplo `/overview?tab=ranking` ou `/overview?tab=jobs`.
 
-## Manual imports 📅
+## Importações manuais 📅
 
-Manual Overview collection accepts one closed day at a time. The default period is the previous closed day from `00:00` to `23:59` in the application time zone.
+A coleta manual do Overview aceita um dia fechado por vez. O período padrão é o dia anterior fechado, de `00:00` até `23:59`, no fuso horário da aplicação.
 
-The current day is blocked because it is still changing.
+O dia atual é bloqueado porque ainda está mudando.
 
-## Useful links 🔗
+## Links úteis 🔗
 
-* [Period and coverage](overview-period-and-coverage.md)
+* [Período e cobertura](overview-period-and-coverage.md)
 * [Ranking](overview-ranking.md)
 * [Jobs](overview-jobs.md)
-* [Overview settings](overview-settings.md)
+* [Configurações do Overview](overview-settings.md)

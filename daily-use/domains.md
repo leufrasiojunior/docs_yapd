@@ -1,52 +1,52 @@
 ---
-description: Manage exact domains and regex rules across Pi-hole instances.
+description: Gerencie domínios exatos e regras regex entre instâncias Pi-hole.
 icon: globe
 ---
 
-# Domains 🌐
+# Domínios 🌐
 
-Domains lets you manage exact domain entries and preset regex rules across your Pi-hole instances.
+Domínios permite gerenciar entradas exatas e regras regex pré-definidas entre suas instâncias Pi-hole.
 
-![YAPD Domains](../.gitbook/assets/screenshots/domains.png)
+![Domínios do YAPD](../.gitbook/assets/screenshots/domains.png)
 
-## Domain types 🧩
+## Tipos de domínio 🧩
 
-YAPD supports:
+O YAPD suporta:
 
-* exact allow entries;
-* exact block entries;
-* regex allow entries;
-* regex block entries;
-* preset regex patterns for common use cases.
+* entradas exatas de allow;
+* entradas exatas de block;
+* entradas regex de allow;
+* entradas regex de block;
+* padrões regex pré-definidos para usos comuns.
 
-## Create a domain ➕
+## Criar um domínio ➕
 
-When creating a domain, choose:
+Ao criar um domínio, escolha:
 
-* domain or regex text;
-* filter type;
-* comment;
-* assigned groups.
+* texto do domínio ou regex;
+* tipo de filtro;
+* comentário;
+* grupos atribuídos.
 
-YAPD attempts to replicate the new entry across managed instances.
+O YAPD tenta replicar a nova entrada entre as instâncias gerenciadas.
 
-## Table actions 🛠️
+## Ações da tabela 🛠️
 
-From the table you can:
+Na tabela você pode:
 
-* search by domain or comment;
-* refresh the view;
-* sync domains;
-* enable or disable entries;
-* open details;
-* edit groups and comments;
-* remove one or more domains;
-* export or import CSV.
+* pesquisar por domínio ou comentário;
+* atualizar a visão;
+* sincronizar domínios;
+* ativar ou desativar entradas;
+* abrir detalhes;
+* editar grupos e comentários;
+* remover um ou mais domínios;
+* exportar ou importar CSV.
 
-## Sync pending 🔁
+## Sync pendente 🔁
 
-If a domain exists on some instances but not others, use the sync dialog to choose a source and targets.
+Se um domínio existe em algumas instâncias, mas não em outras, use o diálogo de sync para escolher origem e destinos.
 
 {% hint style="warning" %}
-⚠️ Removing a domain removes it from every managed instance selected by the operation.
+⚠️ Remover um domínio remove a entrada de todas as instâncias gerenciadas selecionadas pela operação.
 {% endhint %}

@@ -1,53 +1,53 @@
 ---
-description: Search recent DNS activity and act on domains from one place.
+description: Pesquise atividade DNS recente e aplique ações em domínios a partir de um só lugar.
 icon: file-text
 ---
 
 # Queries Log 🔎
 
-Queries Log shows recent DNS queries across your selected YAPD scope, with filters, suggestions, live updates, and quick domain actions.
+Queries Log mostra consultas DNS recentes no escopo selecionado do YAPD, com filtros, sugestões, atualização ao vivo e ações rápidas de domínio.
 
-![YAPD Queries Log](../.gitbook/assets/screenshots/queries.png)
+![Queries Log do YAPD](../.gitbook/assets/screenshots/queries.png)
 
-## What you can filter 🧰
+## O que você pode filtrar 🧰
 
-Use filters to narrow the table by:
+Use filtros para reduzir a tabela por:
 
-* time range;
-* domain;
-* client IP;
-* groups;
+* intervalo de tempo;
+* domínio;
+* IP do cliente;
+* grupos;
 * upstream;
-* type;
+* tipo;
 * status;
-* reply;
+* resposta;
 * DNSSEC;
-* on-disk database mode.
+* modo de banco em disco.
 
-The date filters use the application time zone.
+Os filtros de data usam o fuso horário da aplicação.
 
-## Live mode ⚡
+## Modo live ⚡
 
-Live mode refreshes the query table every few seconds. Turn live mode off when you want to navigate pages calmly.
+O modo live atualiza a tabela de queries a cada poucos segundos. Desative o live mode quando quiser navegar entre páginas com calma.
 
-## On-disk mode 💿
+## Modo on-disk 💿
 
-Use **Load from on-disk database** when you need older Pi-hole data.
+Use **Carregar do banco em disco** quando precisar de dados mais antigos do Pi-hole.
 
 {% hint style="warning" %}
-🐢 On-disk mode is slower and disables live updates.
+🐢 O modo on-disk é mais lento e desativa atualizações ao vivo.
 {% endhint %}
 
-## Quick domain actions 🛠️
+## Ações rápidas de domínio 🛠️
 
-From the query table, you can use domain actions such as:
+Na tabela de queries, você pode usar ações como:
 
-* block a domain;
-* block by regex;
-* allow a domain.
+* bloquear um domínio;
+* bloquear por regex;
+* permitir um domínio.
 
-YAPD applies the action to available instances and reports partial failures when some instances cannot be updated.
+O YAPD aplica a ação nas instâncias disponíveis e informa falhas parciais quando algumas instâncias não puderem ser atualizadas.
 
-## Group review warning 🧭
+## Aviso de revisão de grupos 🧭
 
-If YAPD warns that group review is needed, open **Groups**. This keeps group-based query filters accurate across instances.
+Se o YAPD avisar que uma revisão de grupos é necessária, abra **Grupos**. Isso mantém filtros de query por grupo corretos entre instâncias.

@@ -1,43 +1,43 @@
 ---
-description: Review devices detected by Pi-hole and manage client groups and tags.
+description: Revise dispositivos detectados pelo Pi-hole e gerencie grupos e tags de clientes.
 icon: monitor-smartphone
 ---
 
-# Clients 📱
+# Clientes 📱
 
-Clients lists network devices detected by your Pi-hole instances and helps you organize them with groups, comments, and local tags.
+Clientes lista dispositivos de rede detectados pelas instâncias Pi-hole e ajuda a organizá-los com grupos, comentários e tags locais.
 
-## What you can do 👀
+## O que você pode fazer 👀
 
-Use Clients to:
+Use Clientes para:
 
-* search by client, IP, or MAC address;
-* review where a device is visible;
-* inspect first seen and last query information;
-* edit local tags;
-* hide selected tag categories from the table;
-* manage group assignments;
-* run manual client sync.
+* pesquisar por cliente, IP ou endereço MAC;
+* revisar onde um dispositivo está visível;
+* inspecionar informações de primeira visualização e última query;
+* editar tags locais;
+* ocultar categorias de tags selecionadas da tabela;
+* gerenciar associações de grupos;
+* executar sync manual de clientes.
 
-## Client details 🧾
+## Detalhes do cliente 🧾
 
-The details view can show:
+A visão de detalhes pode mostrar:
 
-* client alias;
-* MAC address;
-* detected IPs;
-* MAC vendor;
-* preferred instance;
-* visible instances;
-* selected groups;
-* comments;
-* per-instance query counts.
+* alias do cliente;
+* endereço MAC;
+* IPs detectados;
+* fabricante do MAC;
+* instância preferida;
+* instâncias visíveis;
+* grupos selecionados;
+* comentários;
+* contagem de queries por instância.
 
 ## Tags 🏷️
 
-Tags are local YAPD labels. Use them to organize devices without changing Pi-hole itself.
+Tags são rótulos locais do YAPD. Use-as para organizar dispositivos sem alterar o Pi-hole.
 
-Examples:
+Exemplos:
 
 * `iot`;
 * `kids`;
@@ -45,14 +45,14 @@ Examples:
 * `work`;
 * `ignore`.
 
-## Groups 👥
+## Grupos 👥
 
-Client group assignments use baseline-backed group selection and then apply changes across available managed instances.
+Associações de grupo do cliente usam a seleção de grupos baseada na baseline e depois aplicam mudanças nas instâncias gerenciadas disponíveis.
 
 {% hint style="warning" %}
-⚠️ Group changes can affect filtering behavior for the selected client. Confirm the selected groups before saving.
+⚠️ Mudanças de grupo podem afetar o comportamento de filtragem do cliente selecionado. Confirme os grupos escolhidos antes de salvar.
 {% endhint %}
 
-## Partial availability ⚠️
+## Disponibilidade parcial ⚠️
 
-If some sync-enabled instances cannot be queried, YAPD shows the data returned by available instances and excludes unavailable ones from the current table.
+Se algumas instâncias com sync habilitado não puderem ser consultadas, o YAPD mostra os dados retornados pelas instâncias disponíveis e exclui as indisponíveis da tabela atual.

@@ -1,53 +1,53 @@
 ---
-description: Use the Dashboard for a live consolidated view of your Pi-hole instances.
+description: Use o Dashboard para acompanhar uma visão consolidada e ao vivo das suas instâncias Pi-hole.
 icon: gauge
 ---
 
 # Dashboard 📈
 
-Dashboard is the everyday live view for checking current Pi-hole activity across one or more registered instances.
+Dashboard é a tela diária para conferir a atividade atual do Pi-hole em uma ou mais instâncias cadastradas.
 
-![YAPD Dashboard](../.gitbook/assets/screenshots/dashboard.png)
+![Dashboard do YAPD](../.gitbook/assets/screenshots/dashboard.png)
 
-## What you see 👀
+## O que você vê 👀
 
-The Dashboard shows:
+O Dashboard mostra:
 
-* total queries;
-* blocked queries;
-* block percentage;
-* total domains in ad-lists;
-* query volume over the last 24 hours;
-* top client activity over the last 24 hours;
-* warnings when only part of the instances responded.
+* total de queries;
+* queries bloqueadas;
+* percentual de bloqueio;
+* total de domínios em ad-lists;
+* volume de queries nas últimas 24 horas;
+* clientes com mais atividade nas últimas 24 horas;
+* avisos quando apenas parte das instâncias respondeu.
 
-## Choose the scope 🎯
+## Escolha o escopo 🎯
 
-Use the **Scope** selector to switch between:
+Use o seletor **Escopo** para alternar entre:
 
-* **All instances**: combine data from every available operational instance.
-* **One instance**: inspect a single Pi-hole.
+* **Todas as instâncias**: combina dados de todas as instâncias operacionais disponíveis.
+* **Uma instância**: mostra apenas um Pi-hole.
 
 {% hint style="info" %}
-📌 Dashboard is a live operational screen. For historical analysis, use [Overview](overview.md).
+📌 Dashboard é uma tela operacional ao vivo. Para análise histórica, use [Overview](overview.md).
 {% endhint %}
 
-## Partial data ⚠️
+## Dados parciais ⚠️
 
-If one or more instances fail to respond, YAPD keeps the healthy data visible and shows a partial-data warning.
+Se uma ou mais instâncias não responderem, o YAPD mantém os dados saudáveis visíveis e mostra um aviso de dados parciais.
 
-When this happens:
+Quando isso acontecer:
 
-1. Open **Instances**.
-2. Test the failed instance.
-3. Reauthenticate it if the session expired.
-4. Check **Notifications** for a clearer failure reason.
+1. Abra **Instâncias**.
+2. Teste a instância com falha.
+3. Reautentique se a sessão expirou.
+4. Confira **Notificações** para ver um motivo de falha mais claro.
 
-## When to use Dashboard ✅
+## Quando usar o Dashboard ✅
 
-Use Dashboard when you want to know what is happening now:
+Use o Dashboard quando quiser entender o que está acontecendo agora:
 
-* after changing a blocking rule;
-* after adding or removing an ad-list;
-* when a client seems unusually active;
-* when you want a quick health check before doing a sync.
+* depois de alterar uma regra de bloqueio;
+* depois de adicionar ou remover uma ad-list;
+* quando um cliente parecer ativo demais;
+* quando quiser uma checagem rápida antes de fazer sync.

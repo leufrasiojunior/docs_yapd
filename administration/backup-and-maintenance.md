@@ -1,38 +1,38 @@
 ---
-description: Keep YAPD and its data recoverable during regular operation.
+description: Mantenha o YAPD e seus dados recuperáveis durante a operação normal.
 icon: database-backup
 ---
 
-# Backup and maintenance 💾
+# Backup e manutenção 💾
 
-YAPD stores its own data in PostgreSQL, including setup state, registered instances, notifications, preferences, and locally imported Overview history.
+O YAPD salva seus próprios dados no PostgreSQL, incluindo estado de setup, instâncias cadastradas, notificações, preferências e histórico local importado pelo Overview.
 
-## What to back up 🧳
+## O que fazer backup 🧳
 
-Back up:
+Faça backup de:
 
-* the PostgreSQL volume used by YAPD;
-* your edited `compose.yml`;
-* any external reverse proxy configuration;
-* notes about your Pi-hole URLs, certificate choices, and login mode.
+* volume PostgreSQL usado pelo YAPD;
+* seu `compose.yml` editado;
+* configuração do proxy reverso externo;
+* notas sobre URLs dos Pi-holes, escolhas de certificado e modo de login.
 
 {% hint style="info" %}
-📌 YAPD does not replace Pi-hole backups. Continue backing up your Pi-hole instances separately.
+📌 O YAPD não substitui backups do Pi-hole. Continue fazendo backup das instâncias Pi-hole separadamente.
 {% endhint %}
 
-## Before risky changes ✅
+## Antes de mudanças de risco ✅
 
-Create a backup before:
+Crie backup antes de:
 
-* changing the production Compose file;
-* moving YAPD to another server;
-* replacing secrets;
-* bulk syncing configuration;
-* deleting large historical Overview periods.
+* alterar o Compose de produção;
+* mover o YAPD para outro servidor;
+* trocar segredos;
+* executar sync de configuração em lote;
+* apagar grandes períodos históricos do Overview.
 
-## Maintenance checks 🧰
+## Checagens de manutenção 🧰
 
-Use these checks during normal operation:
+Use estas checagens durante a operação normal:
 
 ```bash
 docker compose ps
@@ -40,25 +40,25 @@ docker compose logs --tail=200 yapd
 docker compose logs --tail=200 postgres
 ```
 
-Then inspect the UI:
+Depois confira a interface:
 
-* **Instances**: look for expired sessions or failed validation.
-* **Notifications**: mark expected events as read and review failures.
-* **Overview > Jobs**: check failed, paused, or partial jobs.
-* **Configuration**: review drift before syncing.
+* **Instâncias**: procure sessões expiradas ou falhas de validação.
+* **Notificações**: marque eventos esperados como lidos e revise falhas.
+* **Overview > Jobs**: confira jobs com falha, pausados ou parciais.
+* **Configurações**: revise drift antes de sincronizar.
 
-## Updating YAPD ⬆️
+## Atualizando o YAPD ⬆️
 
-A normal update usually means pulling a newer image and restarting:
+Uma atualização normal costuma significar baixar a imagem nova e reiniciar:
 
 ```bash
 docker compose pull
 docker compose up -d
 ```
 
-After the update, open YAPD and verify:
+Depois da atualização, abra o YAPD e confirme:
 
-* the login still works;
-* the baseline is still correct;
-* registered instances still test successfully;
-* Overview jobs and Notifications load.
+* login funcionando;
+* baseline ainda correta;
+* instâncias cadastradas testando com sucesso;
+* Overview jobs e Notificações carregando.

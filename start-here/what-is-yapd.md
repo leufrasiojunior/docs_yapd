@@ -1,44 +1,44 @@
 ---
-description: A friendly introduction to what YAPD does for Pi-hole users.
+description: Uma introdução simples ao que o YAPD faz por usuários de Pi-hole.
 icon: house
 ---
 
-# What is YAPD? 🧩
+# O que é o YAPD? 🧩
 
-YAPD is a single dashboard for operating multiple Pi-hole v6+ instances without jumping between separate Pi-hole admin panels.
+YAPD é um dashboard único para operar múltiplas instâncias Pi-hole v6+ sem precisar alternar entre vários painéis do Pi-hole.
 
-## Why it exists 💡
+## Por que ele existe 💡
 
-Running one Pi-hole is straightforward. Running several Pi-holes for a home, lab, VLAN setup, or small office can get messy:
+Usar um Pi-hole é simples. Usar vários Pi-holes em casa, em um laboratório, em uma rede com VLANs ou em um pequeno escritório pode ficar bagunçado:
 
-* settings drift between instances;
-* query activity is split across different dashboards;
-* changes are easy to miss;
-* manual sync can affect the wrong Pi-hole;
-* temporary connection failures can be hard to understand.
+* configurações podem divergir entre instâncias;
+* a atividade DNS fica espalhada em dashboards diferentes;
+* mudanças importantes podem passar despercebidas;
+* sync manual pode afetar o Pi-hole errado;
+* falhas temporárias de conexão podem ser difíceis de entender.
 
-YAPD gives you one place to watch, compare, and operate those instances.
+O YAPD oferece um lugar central para observar, comparar e operar essas instâncias.
 
-## What YAPD is good at ✅
+## O que o YAPD faz bem ✅
 
-* 👀 **Daily visibility**: see live metrics and recent DNS activity.
-* 📊 **Historical analysis**: use Overview to import and analyze stored query history.
-* 🧱 **Pi-hole object management**: work with groups, clients, domains, and ad-lists.
-* ⚙️ **Configuration review**: compare Pi-hole configuration topics and spot drift.
-* 🔁 **Sync workflows**: copy selected state from a source instance to other targets.
-* 🔔 **Operational awareness**: keep errors and important events visible in Notifications.
+* 👀 **Visibilidade diária**: acompanhe métricas ao vivo e atividade DNS recente.
+* 📊 **Análise histórica**: use o Overview para importar e analisar histórico de consultas.
+* 🧱 **Gerenciamento de objetos do Pi-hole**: trabalhe com grupos, clientes, domínios e ad-lists.
+* ⚙️ **Revisão de configuração**: compare tópicos de configuração do Pi-hole e identifique drift.
+* 🔁 **Fluxos de sync**: copie estados selecionados de uma instância de origem para outros destinos.
+* 🔔 **Acompanhamento operacional**: mantenha erros e eventos importantes visíveis em Notificações.
 
-## What YAPD is not 🚫
+## O que o YAPD não é 🚫
 
-YAPD is not a replacement for understanding what a Pi-hole change does. It helps you operate more safely, but changes such as deleting domains, changing groups, syncing configuration, or deleting Overview history can still affect your network.
+O YAPD não substitui o entendimento do impacto de uma mudança no Pi-hole. Ele ajuda a operar com mais segurança, mas ações como apagar domínios, alterar grupos, sincronizar configurações ou apagar histórico do Overview ainda podem afetar sua rede.
 
 {% hint style="warning" %}
-🧪 YAPD is in development. Use care before applying changes to production Pi-hole instances.
+🧪 O YAPD está em desenvolvimento. Tenha cuidado antes de aplicar mudanças em instâncias Pi-hole de produção.
 {% endhint %}
 
-## Where to go next 🧭
+## Para onde ir agora 🧭
 
-* New installation: [Install with Docker Compose](../administration/install-with-docker-compose.md)
-* First login: [First access and setup](first-access-and-setup.md)
-* Daily use: [Dashboard](../daily-use/dashboard.md)
-* Historical analytics: [Overview](../daily-use/overview.md)
+* Nova instalação: [Instalar com Docker Compose](../administration/install-with-docker-compose.md)
+* Primeiro login: [Primeiro acesso e setup](first-access-and-setup.md)
+* Uso diário: [Dashboard](../daily-use/dashboard.md)
+* Análise histórica: [Overview](../daily-use/overview.md)

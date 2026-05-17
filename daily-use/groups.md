@@ -1,47 +1,47 @@
 ---
-description: Create, edit, sync, and inspect Pi-hole groups across managed instances.
+description: Crie, edite, sincronize e inspecione grupos do Pi-hole entre instâncias gerenciadas.
 icon: waypoints
 ---
 
-# Groups 👥
+# Grupos 👥
 
-Groups is where you manage Pi-hole groups from a consolidated YAPD view.
+Grupos é onde você gerencia grupos do Pi-hole a partir de uma visão consolidada do YAPD.
 
-![YAPD Groups](../.gitbook/assets/screenshots/groups.png)
+![Grupos do YAPD](../.gitbook/assets/screenshots/groups.png)
 
-## What you can do ✅
+## O que você pode fazer ✅
 
-Use Groups to:
+Use Grupos para:
 
-* create one or more groups;
-* search registered groups;
-* enable or disable groups;
-* edit names and comments;
-* delete selected groups;
-* sync missing groups to target instances;
-* view clients linked to a group;
-* manage client group membership individually or in bulk.
+* criar um ou mais grupos;
+* pesquisar grupos cadastrados;
+* ativar ou desativar grupos;
+* editar nomes e comentários;
+* apagar grupos selecionados;
+* sincronizar grupos ausentes para instâncias de destino;
+* ver clientes vinculados a um grupo;
+* gerenciar associação de clientes individualmente ou em lote.
 
-## Creating groups ➕
+## Criar grupos ➕
 
-New groups are created enabled by default and synchronized across managed instances.
+Novos grupos são criados ativos por padrão e sincronizados entre instâncias gerenciadas.
 
-You can create multiple groups by separating names with spaces or commas. Wrap names with spaces in quotes, such as `"Kids Devices"`.
+Você pode criar vários grupos separando nomes por espaços ou vírgulas. Use aspas para nomes com espaço, como `"Dispositivos Crianças"`.
 
-## Sync pending 🔁
+## Sync pendente 🔁
 
-If a group exists on some instances but not others, YAPD marks it as sync pending.
+Se um grupo existe em algumas instâncias, mas não em outras, o YAPD marca como sync pendente.
 
-Open the sync dialog to choose:
+Abra o diálogo de sync para escolher:
 
-* source instance;
-* target instances;
-* whether to apply only one group or all pending groups.
+* instância de origem;
+* instâncias de destino;
+* se deseja aplicar apenas um grupo ou todos os grupos pendentes.
 
-## Protected groups 🛡️
+## Grupos protegidos 🛡️
 
-YAPD can mark default system groups as protected. Treat those with extra care because Pi-hole may rely on them.
+O YAPD pode marcar grupos padrão do sistema como protegidos. Trate esses grupos com cuidado extra porque o Pi-hole pode depender deles.
 
-## Linked clients 🔗
+## Clientes vinculados 🔗
 
-Use **View clients** to inspect clients attached to a group, then adjust memberships one by one or in bulk.
+Use **Ver clientes** para inspecionar clientes associados a um grupo e ajustar associações individualmente ou em lote.

@@ -1,84 +1,84 @@
 ---
-description: Fix the most common YAPD installation and usage problems.
+description: Resolva os problemas mais comuns de instalação e uso do YAPD.
 icon: life-ring
 ---
 
-# Common problems 🧯
+# Problemas comuns 🧯
 
-This page lists user-facing symptoms and what to check first.
+Esta página lista sintomas visíveis ao usuário e o que conferir primeiro.
 
-## Login succeeds, then returns to login 🔁
+## O login funciona, mas volta para a tela de login 🔁
 
-Likely cause: cookie or origin mismatch.
+Causa provável: cookie ou origem pública não batem.
 
-Check:
+Confira:
 
-* `WEB_ORIGIN` exactly matches the browser URL.
-* `COOKIE_SECURE=true` when using HTTPS.
-* `COOKIE_SECURE=false` only when using plain HTTP.
-* The reverse proxy forwards the original protocol with `X-Forwarded-Proto`.
+* `WEB_ORIGIN` corresponde exatamente à URL do navegador.
+* `COOKIE_SECURE=true` quando o acesso é HTTPS.
+* `COOKIE_SECURE=false` somente quando o acesso é HTTP simples.
+* O proxy reverso encaminha o protocolo original com `X-Forwarded-Proto`.
 
-## YAPD cannot reach a Pi-hole 🌐
+## O YAPD não alcança um Pi-hole 🌐
 
-Check:
+Confira:
 
-* the Pi-hole URL, protocol, port, and path;
-* whether the YAPD container can reach that network;
-* whether a firewall blocks the path;
-* whether the Pi-hole password or application password changed;
-* whether the instance uses a self-signed certificate.
+* URL, protocolo, porta e caminho do Pi-hole;
+* se o container do YAPD alcança essa rede;
+* se um firewall bloqueia o caminho;
+* se a senha ou application password do Pi-hole mudou;
+* se a instância usa certificado autoassinado.
 
-Use **Instances > Test** after making changes.
+Use **Instâncias > Test** depois de fazer alterações.
 
-## Self-signed certificate error 🔐
+## Erro de certificado autoassinado 🔐
 
-If the Pi-hole uses a local self-signed certificate, edit the instance and either:
+Se o Pi-hole usa certificado autoassinado local, edite a instância e:
 
-* explicitly allow the self-signed certificate; or
-* provide the custom CA bundle.
+* permita explicitamente o certificado autoassinado; ou
+* informe o bundle da CA customizada.
 
-Only do this for Pi-hole endpoints you trust.
+Faça isso somente para endpoints Pi-hole em que você confia.
 
-## Push notifications do not enable 🔔
+## Notificações push não ativam 🔔
 
-Push needs a secure browser context.
+Push precisa de contexto seguro no navegador.
 
-Check:
+Confira:
 
-* you are using HTTPS with a trusted certificate, or `localhost`;
-* the browser has not blocked notifications for the site;
-* your proxy does not cache `/notifications-sw.js`;
-* the server has push configuration available.
+* você está usando HTTPS com certificado confiável, ou `localhost`;
+* o navegador não bloqueou notificações para o site;
+* o proxy não faz cache de `/notifications-sw.js`;
+* a configuração de push está disponível no servidor.
 
-## Overview shows no data 📊
+## Overview não mostra dados 📊
 
-Overview uses locally stored historical data. It does not automatically show live Pi-hole data unless a historical import has already saved that period.
+O Overview usa dados históricos armazenados localmente. Ele não mostra automaticamente dados ao vivo do Pi-hole se um período histórico ainda não foi importado.
 
-Go to **Overview > Period and coverage**, choose a closed day, and request an import. Then watch **Overview > Jobs**.
+Vá para **Overview > Período e cobertura**, escolha um dia fechado e solicite uma importação. Depois acompanhe em **Overview > Jobs**.
 
-## Overview cannot import today 📅
+## Overview não permite importar hoje 📅
 
-This is expected. Manual Overview imports are limited to one closed day. Choose yesterday or an earlier date.
+Isso é esperado. Importações manuais do Overview são limitadas a um dia fechado. Escolha ontem ou uma data anterior.
 
-## Queries Log live mode stops when disk mode is enabled 💿
+## O live mode do Queries Log para quando o modo disk é ativado 💿
 
-This is expected. On-disk mode is slower and is meant for older Pi-hole data, so live updates are disabled.
+Isso é esperado. O modo on-disk é mais lento e serve para dados mais antigos do Pi-hole, então atualizações ao vivo são desativadas.
 
-## A sync only partially succeeded ⚠️
+## Um sync teve sucesso parcial ⚠️
 
-Open **Notifications** and review the failure. Then check the affected instance in **Instances**.
+Abra **Notificações** e revise a falha. Depois confira a instância afetada em **Instâncias**.
 
-Common causes:
+Causas comuns:
 
-* one target instance was offline;
-* a session expired;
-* credentials changed;
-* TLS validation failed;
-* a Pi-hole response was different than expected.
+* uma instância de destino estava offline;
+* uma sessão expirou;
+* credenciais mudaram;
+* validação TLS falhou;
+* uma resposta do Pi-hole veio diferente do esperado.
 
-## Container shows unhealthy 🐳
+## O container aparece como unhealthy 🐳
 
-Check the container and logs:
+Confira container e logs:
 
 ```bash
 docker compose ps
@@ -86,4 +86,4 @@ docker compose logs --tail=200 yapd
 docker compose logs --tail=200 postgres
 ```
 
-An external Pi-hole being unreachable should be treated as an instance problem, not as a reason to change Pi-hole data manually without checking YAPD logs and Notifications.
+Um Pi-hole externo inalcançável deve ser tratado como problema de instância, não como motivo para alterar dados manualmente sem checar logs do YAPD e Notificações.

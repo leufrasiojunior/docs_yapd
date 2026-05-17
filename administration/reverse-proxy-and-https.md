@@ -1,51 +1,51 @@
 ---
-description: Put YAPD behind a reverse proxy and keep browser security working.
+description: Coloque o YAPD atrás de um proxy reverso e mantenha a segurança do navegador funcionando.
 icon: shield-check
 ---
 
-# Reverse proxy and HTTPS 🔐
+# Proxy reverso e HTTPS 🔐
 
-Use a reverse proxy when you want a friendly domain, a trusted HTTPS certificate, and browser features such as push notifications.
+Use um proxy reverso quando quiser um domínio amigável, certificado HTTPS confiável e recursos do navegador como notificações push.
 
-## Recommended path 🌐
+## Caminho recomendado 🌐
 
-Use this flow:
+Use este fluxo:
 
 ```text
-Browser -> https://yapd.example.com -> reverse proxy -> http://YAPD_HOST:48080
+Navegador -> https://yapd.exemplo.com -> proxy reverso -> http://HOST_YAPD:48080
 ```
 
-The public browser URL should use HTTPS. The private hop from your proxy to YAPD can use HTTP on port `48080`.
+A URL pública do navegador deve usar HTTPS. O caminho privado do proxy até o YAPD pode usar HTTP na porta `48080`.
 
 {% hint style="warning" %}
-⚠️ Avoid using `https://YAPD_HOST:48443` as the normal upstream. That port uses YAPD's internal self-signed certificate and usually creates certificate trust problems in proxies.
+⚠️ Evite usar `https://HOST_YAPD:48443` como upstream normal. Essa porta usa o certificado autoassinado interno do YAPD e costuma causar problemas de confiança no proxy.
 {% endhint %}
 
-## Required settings ⚙️
+## Configurações obrigatórias ⚙️
 
-Set these values in your Compose file:
+Defina estes valores no Compose:
 
 ```yaml
-WEB_ORIGIN: "https://yapd.example.com"
+WEB_ORIGIN: "https://yapd.exemplo.com"
 COOKIE_SECURE: "true"
 NEXT_PUBLIC_API_BASE_URL: /api
 INTERNAL_API_BASE_URL: http://127.0.0.1:3001/api
 ```
 
-`WEB_ORIGIN` must exactly match the URL users type in the browser.
+`WEB_ORIGIN` deve corresponder exatamente à URL que os usuários digitam no navegador.
 
-## Nginx example 🧱
+## Exemplo com Nginx 🧱
 
 ```nginx
 server {
     listen 443 ssl;
-    server_name yapd.example.com;
+    server_name yapd.exemplo.com;
 
-    ssl_certificate /path/to/fullchain.pem;
-    ssl_certificate_key /path/to/privkey.pem;
+    ssl_certificate /caminho/para/fullchain.pem;
+    ssl_certificate_key /caminho/para/privkey.pem;
 
     location / {
-        proxy_pass http://YAPD_HOST:48080;
+        proxy_pass http://HOST_YAPD:48080;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
@@ -58,11 +58,11 @@ server {
 }
 ```
 
-## Caddy example ⚡
+## Exemplo com Caddy ⚡
 
 ```caddy
-yapd.example.com {
-    reverse_proxy http://YAPD_HOST:48080 {
+yapd.exemplo.com {
+    reverse_proxy http://HOST_YAPD:48080 {
         header_up Host {host}
         header_up X-Real-IP {remote_host}
         header_up X-Forwarded-For {remote_host}
@@ -71,26 +71,26 @@ yapd.example.com {
 }
 ```
 
-## Nginx Proxy Manager checklist ✅
+## Checklist para Nginx Proxy Manager ✅
 
-1. Create a new **Proxy Host**.
-2. Set **Domain Names** to your YAPD domain.
-3. Set **Scheme** to `http`.
-4. Set **Forward Hostname/IP** to the YAPD host.
-5. Set **Forward Port** to `48080`.
-6. Enable **Websockets Support**.
-7. Add or request a trusted SSL certificate.
-8. Enable **Force SSL** after the domain works.
-9. Keep **Cache Assets** disabled while testing push notifications.
+1. Crie um novo **Proxy Host**.
+2. Defina **Domain Names** com o domínio do YAPD.
+3. Defina **Scheme** como `http`.
+4. Defina **Forward Hostname/IP** com o host do YAPD.
+5. Defina **Forward Port** como `48080`.
+6. Ative **Websockets Support**.
+7. Adicione ou solicite um certificado SSL confiável.
+8. Ative **Force SSL** depois de confirmar que o domínio funciona.
+9. Mantenha **Cache Assets** desativado enquanto testa notificações push.
 
-## Push notifications 🔔
+## Notificações push 🔔
 
-Browser push needs HTTPS with a trusted public certificate. A self-signed certificate usually blocks the service worker and prevents push from working.
+Push no navegador precisa de HTTPS com certificado público confiável. Um certificado autoassinado normalmente bloqueia o service worker e impede o push.
 
-If your proxy caches assets, add a no-cache rule for:
+Se o proxy faz cache de assets, crie uma regra sem cache para:
 
 ```text
 /notifications-sw.js
 ```
 
-See [Notifications](../daily-use/notifications.md) for user-facing behavior.
+Veja [Notificações](../daily-use/notifications.md) para o comportamento no produto.

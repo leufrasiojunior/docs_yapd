@@ -1,56 +1,56 @@
 ---
-description: Import closed days and understand available Overview coverage.
+description: Importe dias fechados e entenda a cobertura disponível no Overview.
 icon: calendar-days
 ---
 
-# Period and coverage 📅
+# Período e cobertura 📅
 
-Period and coverage is where you choose a closed day, request historical import, delete stored history, and see what Overview data is available.
+Período e cobertura é onde você escolhe um dia fechado, solicita importação histórica, apaga histórico salvo e vê quais dados do Overview estão disponíveis.
 
-![YAPD Overview period and coverage](../.gitbook/assets/screenshots/overview.png)
+![Período e cobertura do Overview](../.gitbook/assets/screenshots/overview.png)
 
-## Pick a day 🎯
+## Escolha um dia 🎯
 
-Use **Date**, **From**, and **Until** to choose the period.
+Use **Date**, **From** e **Until** para escolher o período.
 
-For manual imports:
+Para importações manuais:
 
-* the period must stay inside one calendar day;
-* the day must be closed;
-* the current date cannot be imported;
-* the time fields can still be adjusted inside that selected day.
+* o período deve ficar dentro de um único dia civil;
+* o dia precisa estar fechado;
+* a data atual não pode ser importada;
+* os horários ainda podem ser ajustados dentro do dia selecionado.
 
-## Request import 📥
+## Solicitar importação 📥
 
-Click **Request import** to queue a background job.
+Clique em **Solicitar importação** para enfileirar um job em segundo plano.
 
-After queueing:
+Depois de enfileirar:
 
-1. YAPD creates a job.
-2. The screen remains usable.
-3. Progress appears in **Overview > Jobs**.
-4. Notifications are created when the import succeeds, partially succeeds, or fails.
+1. O YAPD cria um job.
+2. A tela continua utilizável.
+3. O progresso aparece em **Overview > Jobs**.
+4. Notificações são criadas quando a importação conclui, conclui parcialmente ou falha.
 
-## Delete period 🗑️
+## Apagar período 🗑️
 
-Use **Delete period** when you want to remove stored Overview history for the selected period.
+Use **Apagar período** quando quiser remover o histórico salvo do Overview para o período selecionado.
 
 {% hint style="warning" %}
-⚠️ Deleting an Overview period removes locally stored historical rows. It does not delete data from Pi-hole, but Ranking will no longer have that period until you import it again.
+⚠️ Apagar um período do Overview remove linhas históricas armazenadas localmente. Isso não apaga dados do Pi-hole, mas o Ranking não terá esse período até você importá-lo novamente.
 {% endhint %}
 
-## Available coverage 🧾
+## Cobertura disponível 🧾
 
-Coverage tells you what YAPD already has saved:
+Cobertura mostra o que o YAPD já tem salvo:
 
-* stored query count;
-* earliest and latest stored records;
-* completed or partial stored periods;
-* periods close to expiration;
-* coverage that can be renewed.
+* quantidade de queries armazenadas;
+* registro mais antigo e mais recente;
+* períodos salvos concluídos ou parciais;
+* períodos próximos de expirar;
+* cobertura que pode ser renovada.
 
-## Renew coverage 🔄
+## Renovar cobertura 🔄
 
-When a stored period is close to expiring, YAPD can renew it for 30 more days without fetching the data again.
+Quando um período salvo está perto de expirar, o YAPD pode renová-lo por mais 30 dias sem buscar os dados novamente.
 
-Use **Renew +30 days** when you still need that historical period available for future Ranking analysis.
+Use **Renovar +30 dias** quando você ainda precisa daquele período histórico disponível para análises futuras no Ranking.

@@ -1,82 +1,82 @@
 ---
-description: Complete the first YAPD setup and sign in for the first time.
+description: Conclua o primeiro setup do YAPD e faça login pela primeira vez.
 icon: rocket
 ---
 
-# First access and setup 🚀
+# Primeiro acesso e setup 🚀
 
-The setup wizard creates the initial Pi-hole baseline, registers your first instances, chooses the login mode, and saves your display preferences.
+O assistente de setup cria a baseline inicial do Pi-hole, cadastra suas primeiras instâncias, escolhe o modo de login e salva suas preferências visuais.
 
-## Before you begin 📋
+## Antes de começar 📋
 
-Have these ready:
+Tenha em mãos:
 
-* the URL or IP address of each Pi-hole you want to manage;
-* the Pi-hole password or application password for each instance;
-* the instance you want to use as the **master** or **baseline**;
-* whether your Pi-hole uses HTTP, HTTPS, a trusted certificate, or a self-signed certificate;
-* the time zone you want YAPD to use for dates and reports.
+* a URL ou o IP de cada Pi-hole que você quer gerenciar;
+* a senha do Pi-hole ou application password de cada instância;
+* a instância que será usada como **master** ou **baseline**;
+* se o Pi-hole usa HTTP, HTTPS, certificado confiável ou certificado autoassinado;
+* o fuso horário que o YAPD deve usar para datas e relatórios.
 
-## Complete the wizard 🪄
+## Conclua o assistente 🪄
 
 {% stepper %}
 {% step %}
-### Open YAPD 🌐
+### Abra o YAPD 🌐
 
-Open the YAPD address in your browser. With the default Compose install, direct access is usually `http://<server-ip>:48080`.
+Abra o endereço do YAPD no navegador. Com a instalação padrão por Compose, o acesso direto costuma ser `http://<ip-do-servidor>:48080`.
 {% endstep %}
 
 {% step %}
-### Register Pi-holes 🧱
+### Cadastre os Pi-holes 🧱
 
-Add one or more Pi-hole URLs. For each row, provide an alias, protocol, host, port or path when needed, and the password or application password.
+Adicione uma ou mais URLs de Pi-hole. Em cada linha, informe alias, protocolo, host, porta ou caminho quando necessário, e a senha ou application password.
 {% endstep %}
 
 {% step %}
-### Choose the master Pi-hole 👑
+### Escolha o Pi-hole master 👑
 
-Select the Pi-hole that should become the official YAPD baseline. The baseline is the main reference for login and several sync comparisons.
+Selecione o Pi-hole que será a baseline oficial do YAPD. A baseline é a principal referência para login e para várias comparações de sync.
 {% endstep %}
 
 {% step %}
-### Choose the login mode 🔐
+### Escolha o modo de login 🔐
 
-Choose whether operators sign in with the master Pi-hole password or with a dedicated YAPD password created during setup.
+Escolha se os operadores vão entrar com a senha do Pi-hole master ou com uma senha dedicada do YAPD criada durante o setup.
 {% endstep %}
 
 {% step %}
-### Set layout preferences 🎛️
+### Defina preferências visuais 🎛️
 
-Choose the application language, time zone, theme, font, page width, navbar behavior, and sidebar style.
+Escolha idioma da aplicação, fuso horário, tema, fonte, largura da página, comportamento da navbar e estilo da sidebar.
 {% endstep %}
 
 {% step %}
-### Finish setup ✅
+### Finalize o setup ✅
 
-Review the choices and finish the wizard. YAPD validates the Pi-hole connections before saving the setup.
+Revise as escolhas e conclua o assistente. O YAPD valida as conexões com os Pi-holes antes de salvar o setup.
 {% endstep %}
 {% endstepper %}
 
-## Login modes 🔑
+## Modos de login 🔑
 
-| Mode | What it means | When to use it |
+| Modo | O que significa | Quando usar |
 | --- | --- | --- |
-| **Master Pi-hole password** | YAPD uses the official Pi-hole v6 login flow through the master Pi-hole. | You want the human login to follow the Pi-hole password. |
-| **YAPD password** | YAPD stores a hashed product password for human login. | You want operators to sign in without using the Pi-hole password. |
+| **Senha do Pi-hole master** | O YAPD usa o fluxo oficial de login do Pi-hole v6 pelo Pi-hole master. | Quando você quer que o login humano siga a senha do Pi-hole. |
+| **Senha do YAPD** | O YAPD salva uma senha do produto em hash para login humano. | Quando você quer que operadores entrem sem usar a senha do Pi-hole. |
 
 {% hint style="info" %}
-🔒 Pi-hole technical credentials are saved encrypted so the backend can operate registered instances. The password typed at login is not stored as a plain text login password.
+🔒 Credenciais técnicas do Pi-hole são salvas criptografadas para que o backend opere as instâncias registradas. A senha digitada no login não é salva como senha em texto puro.
 {% endhint %}
 
-## If setup fails 🧯
+## Se o setup falhar 🧯
 
-Check the most common causes:
+Confira as causas mais comuns:
 
-* the Pi-hole URL includes the protocol twice;
-* the host, port, or path is wrong;
-* the password or application password is wrong;
-* the backend cannot reach the Pi-hole from the Docker network;
-* the Pi-hole uses a self-signed certificate and you did not explicitly allow it;
-* the selected master Pi-hole was left incomplete.
+* a URL do Pi-hole inclui o protocolo duas vezes;
+* host, porta ou caminho estão incorretos;
+* senha ou application password estão incorretos;
+* o backend não consegue alcançar o Pi-hole pela rede do Docker;
+* o Pi-hole usa certificado autoassinado e você não permitiu isso explicitamente;
+* o Pi-hole master selecionado ficou incompleto.
 
-For recovery steps, see [Common problems](../troubleshooting/common-problems.md).
+Para recuperação, veja [Problemas comuns](../troubleshooting/common-problems.md).

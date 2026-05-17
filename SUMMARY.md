@@ -1,39 +1,39 @@
-# Table of contents
+# Sumário
 
-* [Welcome to YAPD](README.md)
+* [Bem-vindo ao YAPD](README.md)
 
-## 🚀 Start Here
+## 🚀 Comece Aqui
 
-* [What is YAPD?](start-here/what-is-yapd.md)
-* [First access and setup](start-here/first-access-and-setup.md)
-* [Core ideas](start-here/core-ideas.md)
+* [O que é o YAPD?](start-here/what-is-yapd.md)
+* [Primeiro acesso e setup](start-here/first-access-and-setup.md)
+* [Ideias principais](start-here/core-ideas.md)
 
-## 🧭 Daily Use
+## 🧭 Uso Diário
 
 * [Dashboard](daily-use/dashboard.md)
 * [Overview](daily-use/overview.md)
-  * [Period and coverage](daily-use/overview-period-and-coverage.md)
+  * [Período e cobertura](daily-use/overview-period-and-coverage.md)
   * [Ranking](daily-use/overview-ranking.md)
   * [Jobs](daily-use/overview-jobs.md)
-  * [Overview settings](daily-use/overview-settings.md)
+  * [Configurações do Overview](daily-use/overview-settings.md)
 * [Queries Log](daily-use/queries-log.md)
-* [Clients](daily-use/clients.md)
-* [Groups](daily-use/groups.md)
-* [Domains](daily-use/domains.md)
+* [Clientes](daily-use/clients.md)
+* [Grupos](daily-use/groups.md)
+* [Domínios](daily-use/domains.md)
 * [Ad-lists](daily-use/ad-lists.md)
-* [Instances](daily-use/instances.md)
-* [Pi-hole Configuration](daily-use/pi-hole-configuration.md)
-* [Notifications](daily-use/notifications.md)
+* [Instâncias](daily-use/instances.md)
+* [Configurações do Pi-hole](daily-use/pi-hole-configuration.md)
+* [Notificações](daily-use/notifications.md)
 
-## 🛠️ Installation and Administration
+## 🛠️ Instalação e Administração
 
-* [Install with Docker Compose](administration/install-with-docker-compose.md)
-* [Reverse proxy and HTTPS](administration/reverse-proxy-and-https.md)
-* [Safe operation](administration/safe-operation.md)
-* [Backup and maintenance](administration/backup-and-maintenance.md)
+* [Instalar com Docker Compose](administration/install-with-docker-compose.md)
+* [Proxy reverso e HTTPS](administration/reverse-proxy-and-https.md)
+* [Operação segura](administration/safe-operation.md)
+* [Backup e manutenção](administration/backup-and-maintenance.md)
 
-## 🧯 Help and Troubleshooting
+## 🧯 Ajuda e Solução de Problemas
 
-* [Common problems](troubleshooting/common-problems.md)
-* [Known issues](troubleshooting/known-issues.md)
-* [Glossary](troubleshooting/glossary.md)
+* [Problemas comuns](troubleshooting/common-problems.md)
+* [Erros conhecidos](troubleshooting/known-issues.md)
+* [Glossário](troubleshooting/glossary.md)

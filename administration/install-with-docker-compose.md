@@ -1,37 +1,37 @@
 ---
-description: Install YAPD with the production Docker Compose file.
+description: Instale o YAPD com o arquivo Docker Compose de produção.
 icon: download
 ---
 
-# Install with Docker Compose 🐳
+# Instalar com Docker Compose 🐳
 
-Docker Compose is the recommended way to run YAPD for normal self-hosted use.
+Docker Compose é a forma recomendada de rodar o YAPD para uso auto-hospedado normal.
 
-## What you will run 📦
+## O que será executado 📦
 
-The production Compose file starts:
+O Compose de produção inicia:
 
-* a **YAPD app** container with the web interface, API, and internal Nginx;
-* a **PostgreSQL** container for YAPD data;
-* a private Docker network;
-* a persistent Postgres volume.
+* um container **YAPD app** com interface web, API e Nginx interno;
+* um container **PostgreSQL** para os dados do YAPD;
+* uma rede privada Docker;
+* um volume persistente para o Postgres.
 
-The default published ports are:
+As portas publicadas por padrão são:
 
-| Port | Purpose |
+| Porta | Uso |
 | --- | --- |
-| `48080` | HTTP access to YAPD |
-| `48443` | internal HTTPS access with a self-signed certificate |
+| `48080` | Acesso HTTP ao YAPD |
+| `48443` | Acesso HTTPS interno com certificado autoassinado |
 
 {% hint style="info" %}
-🌐 If you use an external reverse proxy, point it to `http://<server-ip>:48080` and let the proxy handle the public HTTPS certificate.
+🌐 Se você usa proxy reverso externo, aponte-o para `http://<ip-do-servidor>:48080` e deixe o proxy cuidar do certificado HTTPS público.
 {% endhint %}
 
-## Quick install ⚡
+## Instalação rápida ⚡
 
 {% stepper %}
 {% step %}
-### Download the Compose file 📥
+### Baixe o arquivo Compose 📥
 
 ```bash
 curl -O https://raw.githubusercontent.com/leufrasiojunior/yadp/main/compose.yml
@@ -39,20 +39,20 @@ curl -O https://raw.githubusercontent.com/leufrasiojunior/yadp/main/compose.yml
 {% endstep %}
 
 {% step %}
-### Edit the required values ✏️
+### Edite os valores obrigatórios ✏️
 
-Open `compose.yml` and change at least:
+Abra `compose.yml` e altere pelo menos:
 
 * `postgres_password`
 * `session_secret`
 * `app_encryption_key`
 * `web_origin`
 
-Use values that are unique to your installation.
+Use valores únicos para sua instalação.
 {% endstep %}
 
 {% step %}
-### Start YAPD ▶️
+### Inicie o YAPD ▶️
 
 ```bash
 docker compose up -d
@@ -60,46 +60,46 @@ docker compose up -d
 {% endstep %}
 
 {% step %}
-### Open the app 🌐
+### Abra o app 🌐
 
-Open:
+Acesse:
 
 ```text
-http://<server-ip>:48080
+http://<ip-do-servidor>:48080
 ```
 
-Then complete [First access and setup](../start-here/first-access-and-setup.md).
+Depois conclua [Primeiro acesso e setup](../start-here/first-access-and-setup.md).
 {% endstep %}
 {% endstepper %}
 
-## Important values 🔐
+## Valores importantes 🔐
 
-| Value | What to set |
+| Valor | O que configurar |
 | --- | --- |
-| `postgres_password` | A strong Postgres password. |
-| `session_secret` | A long random secret for YAPD sessions. |
-| `app_encryption_key` | A long random secret used for encrypted application data. |
-| `web_origin` | The exact browser URL used to open YAPD, such as `https://yapd.example.com`. |
-| `cookie_secure` | Use `true` when the browser opens YAPD over HTTPS. Use `false` only for plain HTTP access. |
+| `postgres_password` | Uma senha forte para o Postgres. |
+| `session_secret` | Um segredo longo e aleatório para sessões do YAPD. |
+| `app_encryption_key` | Um segredo longo e aleatório usado para dados criptografados da aplicação. |
+| `web_origin` | A URL exata usada no navegador, como `https://yapd.exemplo.com`. |
+| `cookie_secure` | Use `true` quando o navegador acessar o YAPD por HTTPS. Use `false` somente para acesso HTTP simples. |
 
 {% hint style="danger" %}
-🚫 Do not reuse the example secrets from the Compose file in a real installation.
+🚫 Não reutilize os segredos de exemplo do arquivo Compose em uma instalação real.
 {% endhint %}
 
-## Basic commands 🧰
+## Comandos básicos 🧰
 
-| Task | Command |
+| Tarefa | Comando |
 | --- | --- |
-| Start | `docker compose up -d` |
-| Stop | `docker compose down` |
-| View app logs | `docker compose logs --tail=200 yapd` |
-| View database logs | `docker compose logs --tail=200 postgres` |
-| Check containers | `docker compose ps` |
+| Iniciar | `docker compose up -d` |
+| Parar | `docker compose down` |
+| Ver logs do app | `docker compose logs --tail=200 yapd` |
+| Ver logs do banco | `docker compose logs --tail=200 postgres` |
+| Ver containers | `docker compose ps` |
 
-## After installation ✅
+## Depois da instalação ✅
 
-Continue with:
+Continue em:
 
-* [First access and setup](../start-here/first-access-and-setup.md)
-* [Reverse proxy and HTTPS](reverse-proxy-and-https.md)
-* [Safe operation](safe-operation.md)
+* [Primeiro acesso e setup](../start-here/first-access-and-setup.md)
+* [Proxy reverso e HTTPS](reverse-proxy-and-https.md)
+* [Operação segura](safe-operation.md)

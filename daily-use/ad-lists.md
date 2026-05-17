@@ -1,44 +1,44 @@
 ---
-description: Manage Pi-hole ad-lists and keep them synchronized across instances.
+description: Gerencie ad-lists do Pi-hole e mantenha-as sincronizadas entre instâncias.
 icon: list
 ---
 
 # Ad-lists 🧾
 
-Ad-lists manages the list sources already registered in Pi-hole and helps keep them synchronized across instances.
+Ad-lists gerencia fontes de lista já cadastradas no Pi-hole e ajuda a mantê-las sincronizadas entre instâncias.
 
-![YAPD Ad-lists](../.gitbook/assets/screenshots/ad-lists.png)
+![Ad-lists do YAPD](../.gitbook/assets/screenshots/ad-lists.png)
 
-## What you can do ✅
+## O que você pode fazer ✅
 
-Use Ad-lists to:
+Use Ad-lists para:
 
-* add block or allow lists;
-* search by address or comment;
-* enable or disable lists;
-* edit comments and groups;
-* remove one or more lists;
-* review sync status;
-* manually sync lists across instances.
+* adicionar listas de block ou allow;
+* pesquisar por endereço ou comentário;
+* ativar ou desativar listas;
+* editar comentários e grupos;
+* remover uma ou mais listas;
+* revisar status de sync;
+* sincronizar listas manualmente entre instâncias.
 
-## Create a list ➕
+## Criar uma lista ➕
 
-When creating a list, provide:
+Ao criar uma lista, informe:
 
-* address;
-* comment;
-* groups.
+* endereço;
+* comentário;
+* grupos.
 
-YAPD replicates the configuration across managed instances where possible.
+O YAPD replica a configuração entre as instâncias gerenciadas sempre que possível.
 
-## Edit a list ✏️
+## Editar uma lista ✏️
 
-The edit dialog shows general details and group assignments. Save changes only after confirming the selected groups and status.
+O diálogo de edição mostra detalhes gerais e associações de grupo. Salve mudanças somente depois de confirmar grupos e status selecionados.
 
-## Sync pending 🔁
+## Sync pendente 🔁
 
-If a list is missing from one or more instances, YAPD marks it as sync pending. Use the sync dialog to choose the source and destination instances.
+Se uma lista estiver ausente em uma ou mais instâncias, o YAPD marca como sync pendente. Use o diálogo de sync para escolher origem e instâncias de destino.
 
 {% hint style="warning" %}
-⚠️ Removing an ad-list can change filtering behavior for clients assigned to its groups.
+⚠️ Remover uma ad-list pode alterar o comportamento de filtragem para clientes associados aos grupos dela.
 {% endhint %}

@@ -1,17 +1,17 @@
 ---
-description: Review Pi-hole configuration topics, detect drift, download Teleporter ZIP, and sync settings.
+description: Revise tópicos de configuração do Pi-hole, detecte drift, baixe Teleporter ZIP e sincronize ajustes.
 icon: settings-2
 ---
 
-# Pi-hole Configuration ⚙️
+# Configurações do Pi-hole ⚙️
 
-Configuration lets you edit detailed Pi-hole settings by topic, detect drift, download a Teleporter ZIP, and sync selected topics across instances.
+Configurações permite editar ajustes detalhados do Pi-hole por tópico, detectar drift, baixar um Teleporter ZIP e sincronizar tópicos selecionados entre instâncias.
 
-![YAPD Configuration](../.gitbook/assets/screenshots/configuration.png)
+![Configurações do YAPD](../.gitbook/assets/screenshots/configuration.png)
 
-## Topics 🧭
+## Tópicos 🧭
 
-The Configuration screen is organized into tabs such as:
+A tela Configurações é organizada em abas como:
 
 * DNS;
 * DHCP;
@@ -23,36 +23,36 @@ The Configuration screen is organized into tabs such as:
 * Misc;
 * Debug.
 
-## Source instance 🎯
+## Instância de origem 🎯
 
-Choose the source instance at the top of the screen. Edits in the active tab are applied to the selected source instance.
+Escolha a instância de origem no topo da tela. Edições na aba ativa são aplicadas à instância de origem selecionada.
 
-## Field editing ✏️
+## Edição de campos ✏️
 
-Fields can be:
+Campos podem ser:
 
-* boolean toggles;
-* text values;
-* JSON-like values for structured settings.
+* toggles booleanos;
+* valores de texto;
+* valores em formato JSON para configurações estruturadas.
 
-YAPD shows helpful metadata such as field path, type, default, allowed values, and flags.
+O YAPD mostra metadados úteis, como caminho do campo, tipo, padrão, valores permitidos e flags.
 
-## Drift detection 🧭
+## Detecção de drift 🧭
 
-If a topic differs between instances, YAPD shows a drift warning. Use the warning links to jump directly to the affected tab and field.
+Se um tópico difere entre instâncias, o YAPD mostra um aviso de drift. Use os links do aviso para ir diretamente à aba e ao campo afetado.
 
-## Ignore sync 🙈
+## Ignorar sync 🙈
 
-Use **Ignore sync** when a field is intentionally different between instances. Ignored fields are removed from drift warnings until restored.
+Use **Ignore sync** quando um campo é intencionalmente diferente entre instâncias. Campos ignorados saem dos avisos de drift até serem restaurados.
 
-## Sync a tab 🔁
+## Sincronizar uma aba 🔁
 
-Use **Sync** inside a topic to copy that tab's configuration from a selected source to selected targets.
+Use **Sync** dentro de um tópico para copiar a configuração daquela aba de uma origem selecionada para destinos selecionados.
 
 {% hint style="warning" %}
-⚠️ Configuration sync can change Pi-hole behavior. Review source, targets, and tab before confirming.
+⚠️ Sync de configuração pode mudar o comportamento do Pi-hole. Revise origem, destinos e aba antes de confirmar.
 {% endhint %}
 
 ## Teleporter ZIP 📦
 
-Use **Download Teleporter ZIP** to download a Pi-hole Teleporter export from the current configuration source.
+Use **Baixar Teleporter ZIP** para baixar uma exportação Teleporter do Pi-hole a partir da origem de configuração atual.

@@ -1,47 +1,47 @@
 ---
-description: Understand the product ideas that appear across the YAPD interface.
+description: Entenda as ideias de produto que aparecem em várias telas do YAPD.
 icon: lightbulb
 ---
 
-# Core ideas 💡
+# Ideias principais 💡
 
-YAPD uses a few recurring concepts across its screens.
+O YAPD usa alguns conceitos recorrentes em suas telas.
 
-## Instance 🧱
+## Instância 🧱
 
-An **instance** is one Pi-hole registered in YAPD. Instances can be tested, edited, reauthenticated, included in sync, or removed from sync operations.
+Uma **instância** é um Pi-hole cadastrado no YAPD. Instâncias podem ser testadas, editadas, reautenticadas, incluídas no sync ou removidas de operações globais de sync.
 
 ## Baseline 👑
 
-The **baseline** is the primary Pi-hole reference. YAPD uses it as the main authority for several comparisons and sync flows. You can change the primary instance from the **Instances** screen.
+A **baseline** é o Pi-hole principal de referência. O YAPD usa essa instância como autoridade principal para várias comparações e fluxos de sync. Você pode trocar a instância primária pela tela **Instâncias**.
 
-## Scope 🎯
+## Escopo 🎯
 
-Some screens let you choose a scope:
+Algumas telas permitem escolher um escopo:
 
-* **All instances**: YAPD aggregates or compares all enabled instances.
-* **Single instance**: YAPD shows only one Pi-hole.
+* **Todas as instâncias**: o YAPD agrega ou compara todas as instâncias disponíveis.
+* **Uma instância**: o YAPD mostra apenas um Pi-hole.
 
 ## Sync 🔁
 
-Sync copies selected data from a source to one or more target instances. It can apply to groups, clients, domains, ad-lists, configuration topics, or blocking state.
+Sync copia dados selecionados de uma origem para uma ou mais instâncias de destino. Ele pode se aplicar a grupos, clientes, domínios, ad-lists, tópicos de configuração ou estado de bloqueio.
 
 {% hint style="warning" %}
-⚠️ Review the source and targets before confirming a sync. Sync is a real operation against your Pi-hole instances.
+⚠️ Revise origem e destinos antes de confirmar um sync. Sync é uma operação real contra suas instâncias Pi-hole.
 {% endhint %}
 
-## Drift or divergence 🧭
+## Drift ou divergência 🧭
 
-Drift means one instance does not match the expected state or the selected source. YAPD highlights drift so you can review it before changing anything.
+Drift significa que uma instância não corresponde ao estado esperado ou à origem selecionada. O YAPD destaca divergências para que você revise antes de alterar algo.
 
-## Overview history 📊
+## Histórico do Overview 📊
 
-Overview does not read only the live Pi-hole dashboard. It uses historical query data saved in YAPD's local database. You must import a closed day before Overview can rank domains, clients, upstreams, and statuses for that period.
+O Overview não lê apenas o dashboard ao vivo do Pi-hole. Ele usa histórico de consultas salvo no banco local do YAPD. Você precisa importar um dia fechado antes que o Overview consiga ranquear domínios, clientes, upstreams e status desse período.
 
-## Notifications 🔔
+## Notificações 🔔
 
-Notifications are stored events and failures. They help you notice connection errors, sync failures, Overview import results, and other operational messages.
+Notificações são eventos e falhas armazenados. Elas ajudam a notar erros de conexão, falhas de sync, resultados de importação do Overview e outras mensagens operacionais.
 
-## Beta status 🚧
+## Status beta 🚧
 
-YAPD is still evolving. The product includes a BETA notice because it can operate directly on Pi-hole instances and because some workflows are still being refined.
+O YAPD ainda está evoluindo. O produto exibe um aviso BETA porque pode operar diretamente em instâncias Pi-hole e porque alguns fluxos ainda estão sendo refinados.

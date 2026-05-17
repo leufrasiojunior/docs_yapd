@@ -1,74 +1,74 @@
 ---
-description: Register, test, reauthenticate, and manage Pi-hole instances.
+description: Cadastre, teste, reautentique e gerencie instâncias Pi-hole.
 icon: server
 ---
 
-# Instances 🧱
+# Instâncias 🧱
 
-Instances is where you manage the Pi-hole servers registered in YAPD.
+Instâncias é onde você gerencia os servidores Pi-hole cadastrados no YAPD.
 
-![YAPD Instances](../.gitbook/assets/screenshots/instances.png)
+![Instâncias do YAPD](../.gitbook/assets/screenshots/instances.png)
 
-## What you can do ✅
+## O que você pode fazer ✅
 
-Use Instances to:
+Use Instâncias para:
 
-* register another Pi-hole;
-* discover candidate Pi-hole URLs;
-* test a saved connection;
-* reauthenticate an expired session;
-* include or exclude an instance from sync operations;
-* edit connection settings;
-* inspect operational information;
-* make another instance the primary baseline.
+* cadastrar outro Pi-hole;
+* descobrir URLs candidatas de Pi-hole;
+* testar uma conexão salva;
+* reautenticar uma sessão expirada;
+* incluir ou excluir uma instância de operações de sync;
+* editar configurações de conexão;
+* inspecionar informações operacionais;
+* tornar outra instância a baseline primária.
 
-## Register an instance ➕
+## Cadastrar uma instância ➕
 
-You can register an instance manually or use guided discovery.
+Você pode cadastrar uma instância manualmente ou usar descoberta guiada.
 
-For manual registration, provide:
+No cadastro manual, informe:
 
-* name;
-* protocol;
-* host, port, and optional path;
-* password or application password;
-* certificate trust choice when needed.
+* nome;
+* protocolo;
+* host, porta e caminho opcional;
+* senha ou application password;
+* escolha de confiança de certificado quando necessário.
 
-## Trust choices 🔐
+## Escolhas de confiança 🔐
 
-| Option | Use it when |
+| Opção | Quando usar |
 | --- | --- |
-| Default trust | The Pi-hole certificate is trusted normally. |
-| Explicit self-signed trust | You trust a local self-signed Pi-hole certificate. |
-| Custom CA | You have a private CA certificate bundle. |
+| Confiança padrão | O certificado do Pi-hole é confiável normalmente. |
+| Permitir autoassinado explicitamente | Você confia em um certificado local autoassinado daquele Pi-hole. |
+| CA customizada | Você tem um bundle de certificado de CA privada. |
 
-## Reauthenticate 🔑
+## Reautenticar 🔑
 
-Use **Reauthenticate** when:
+Use **Reauthenticate** quando:
 
-* the Pi-hole session expired;
-* the password changed;
-* Notifications report a session failure;
-* sync operations fail because the instance is unauthorized.
+* a sessão do Pi-hole expirou;
+* a senha mudou;
+* Notificações reportam falha de sessão;
+* operações de sync falham porque a instância não está autorizada.
 
-## Make primary 👑
+## Tornar primária 👑
 
-Changing the primary instance updates the global YAPD baseline. The previous primary loses baseline status, and sync remains enabled on the new primary.
+Trocar a instância primária atualiza a baseline global do YAPD. A primária anterior perde o status de baseline e o sync permanece habilitado na nova primária.
 
 {% hint style="warning" %}
-⚠️ Confirm the new primary carefully. The baseline affects comparisons and several sync flows.
+⚠️ Confirme a nova primária com cuidado. A baseline afeta comparações e vários fluxos de sync.
 {% endhint %}
 
-## Error details 🧯
+## Detalhes de erro 🧯
 
-YAPD classifies common instance failures:
+O YAPD classifica falhas comuns de instância:
 
-* invalid credentials;
-* TLS or certificate failure;
+* credenciais inválidas;
+* falha de TLS ou certificado;
 * timeout;
-* DNS error;
-* connection refused;
-* unexpected Pi-hole response;
-* unclassified failure.
+* erro de DNS;
+* conexão recusada;
+* resposta inesperada do Pi-hole;
+* falha não classificada.
 
-Open **More error details** for what to check next.
+Abra **Mais detalhes do erro** para ver o que conferir em seguida.

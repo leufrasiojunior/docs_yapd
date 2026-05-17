@@ -1,55 +1,55 @@
 ---
-description: Review stored events, failures, and browser push notification state.
+description: Revise eventos armazenados, falhas e estado de notificações push no navegador.
 icon: bell
 ---
 
-# Notifications 🔔
+# Notificações 🔔
 
-Notifications centralizes YAPD events, Pi-hole messages, and recent operational failures.
+Notificações centraliza eventos do YAPD, mensagens do Pi-hole e falhas operacionais recentes.
 
-![YAPD Notifications](../.gitbook/assets/screenshots/notifications.png)
+![Notificações do YAPD](../.gitbook/assets/screenshots/notifications.png)
 
-## What appears here 📬
+## O que aparece aqui 📬
 
-Notifications can include:
+Notificações podem incluir:
 
-* connection errors;
-* session failures;
-* sync failures;
-* Overview import results;
-* Overview deletion results;
-* Overview coverage renewals;
-* collector failures;
-* system failures.
+* erros de conexão;
+* falhas de sessão;
+* falhas de sync;
+* resultados de importação do Overview;
+* resultados de deleção do Overview;
+* renovações de cobertura do Overview;
+* falhas de coletores;
+* falhas do sistema.
 
-## Unread and read tabs 🗂️
+## Abas não lidas e lidas 🗂️
 
-Use the tabs to separate active unread events from older read events. You can mark one notification as read or mark all visible notifications as read.
+Use as abas para separar eventos não lidos de eventos antigos já lidos. Você pode marcar uma notificação como lida ou marcar todas as notificações visíveis como lidas.
 
-## Clearer failure titles 🧯
+## Títulos de falha mais claros 🧯
 
-YAPD tries to show user-readable failure titles instead of raw technical codes.
+O YAPD tenta mostrar títulos legíveis em vez de códigos técnicos crus.
 
-Common titles include:
+Títulos comuns incluem:
 
-* invalid credentials;
-* TLS error;
-* connection timeout;
-* DNS error;
-* connection refused;
-* Pi-hole response error.
+* credenciais inválidas;
+* erro de TLS;
+* timeout de conexão;
+* erro de DNS;
+* conexão recusada;
+* erro de resposta do Pi-hole.
 
-## Push notifications 📲
+## Notificações push 📲
 
-Push notifications can be enabled per browser/device when the deployment supports them.
+Notificações push podem ser ativadas por navegador/dispositivo quando o deploy suporta esse recurso.
 
-Push requires:
+Push exige:
 
-* HTTPS with a trusted certificate, or localhost;
-* browser support for push notifications;
-* browser permission set to allowed;
-* server push configuration available.
+* HTTPS com certificado confiável, ou localhost;
+* suporte do navegador a push notifications;
+* permissão do navegador definida como permitida;
+* configuração de push disponível no servidor.
 
 {% hint style="warning" %}
-🔒 Push usually does not work from plain `http://<server-ip>:48080` access. Use a trusted HTTPS domain through a reverse proxy.
+🔒 Push normalmente não funciona pelo acesso direto `http://<ip-do-servidor>:48080`. Use um domínio HTTPS confiável por proxy reverso.
 {% endhint %}
