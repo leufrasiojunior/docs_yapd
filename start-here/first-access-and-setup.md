@@ -35,7 +35,7 @@ Adicione uma ou mais URLs de Pi-hole. Em cada linha, informe alias, protocolo, h
 {% step %}
 ### Escolha o Pi-hole master 👑
 
-Selecione o Pi-hole que será a baseline oficial do YAPD. A baseline é a principal referência para login e para várias comparações de sync.
+Selecione o Pi-hole que será a baseline principal do YAPD. A baseline é a principal referência para login e para várias comparações de sync.
 {% endstep %}
 
 {% step %}
@@ -61,7 +61,7 @@ Revise as escolhas e conclua o assistente. O YAPD valida as conexões com os Pi-
 
 | Modo | O que significa | Quando usar |
 | --- | --- | --- |
-| **Senha do Pi-hole master** | O YAPD usa o fluxo oficial de login do Pi-hole v6 pelo Pi-hole master. | Quando você quer que o login humano siga a senha do Pi-hole. |
+| **Senha do Pi-hole master** | O YAPD usa o fluxo nativo de login do Pi-hole v6 pelo Pi-hole master. | Quando você quer que o login humano siga a senha do Pi-hole. |
 | **Senha do YAPD** | O YAPD salva uma senha do produto em hash para login humano. | Quando você quer que operadores entrem sem usar a senha do Pi-hole. |
 
 {% hint style="info" %}
