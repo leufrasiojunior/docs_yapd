@@ -1,30 +1,45 @@
 ---
-description: >-
-  Everything you need to build, deploy, and manage your projects on the
-  platform.
+description: User guide for installing, setting up, and using YAPD with Pi-hole v6+.
 icon: hand-wave
 ---
 
-# Welcome
+# Welcome to YAPD 👋
 
-Welcome to the platform. These docs cover everything from your first project to advanced workflows — pick a starting point below or ask the Assistant to jump straight to what you need.
+![YAPD logo](.gitbook/assets/brand/logo-bg-transparent.png)
 
-<button type="button" class="button primary" data-action="ask" data-icon="gitbook-assistant">Ask a question…</button>
+YAPD is a self-hosted dashboard for people who run more than one Pi-hole instance and want a clearer, safer way to operate them from one place.
 
-<button type="button" class="button secondary" data-action="ask" data-query="How do I deploy my first project" data-icon="rocket-launch">Deploy your first project</button><button type="button" class="button secondary" data-action="ask" data-query="How do I set up a custom domain" data-icon="globe">Set up a custom domain</button><button type="button" class="button secondary" data-action="ask" data-query="How do I invite my team" data-icon="user-group">Invite your team</button>
+Use these docs to install YAPD, complete the first setup, understand each screen, troubleshoot common errors, and use the special **Overview** screen for historical DNS analysis.
 
-***
-
-{% hint style="success" icon="sparkles" %}
-**New: scheduled deploys and team-level audit logs.** Schedule deploys for any future date and review every action taken in your workspace.
-
-<a href="https://gitbook.com/docs/changelog" class="button secondary">See what's new</a>
+{% hint style="warning" %}
+🚧 YAPD is still in active development. Treat it as an early operational tool, especially when using it against production Pi-hole instances.
 {% endhint %}
 
-## Where to start
+## Start with these pages 🌱
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><h4><i class="fa-rocket-launch" style="color:$primary;">:rocket-launch:</i></h4></td><td><h4>Getting started</h4></td><td>Set up your account and ship your first project in minutes.</td><td><a href="/broken/pages/PbYb0GukRhiS4qCHdRal">Broken link</a></td></tr><tr><td><h4><i class="fa-book" style="color:$primary;">:book:</i></h4></td><td><h4>Core concepts</h4></td><td>Understand workspaces, projects, and how permissions work.</td><td><a href="/broken/pages/EFXeLTHVDQLFgK0Iy51O">Broken link</a></td></tr><tr><td><h4><i class="fa-graduation-cap" style="color:$primary;">:graduation-cap:</i></h4></td><td><h4>Guides</h4></td><td>Walkthroughs for common tasks like custom domains and automations.</td><td><a href="/broken/pages/oUUNprjFZmH3rqDBvb9h">Broken link</a></td></tr><tr><td><h4><i class="fa-book-open" style="color:$primary;">:book-open:</i></h4></td><td><h4>Reference</h4></td><td>Detailed configuration options, limits, and terminology.</td><td><a href="/broken/pages/AYVJmAXbSHYSDodrPBYA">Broken link</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-type="content-ref"></th><th data-type="content-ref"></th></tr></thead><tbody><tr><td><h4>🚀 New users</h4></td><td><a href="start-here/what-is-yapd.md">what-is-yapd.md</a></td><td><a href="start-here/first-access-and-setup.md">first-access-and-setup.md</a></td></tr><tr><td><h4>🧭 Daily operation</h4></td><td><a href="daily-use/dashboard.md">dashboard.md</a></td><td><a href="daily-use/overview.md">overview.md</a></td></tr><tr><td><h4>🛠️ Admin setup</h4></td><td><a href="administration/install-with-docker-compose.md">install-with-docker-compose.md</a></td><td><a href="administration/reverse-proxy-and-https.md">reverse-proxy-and-https.md</a></td></tr><tr><td><h4>🧯 Something broke</h4></td><td><a href="troubleshooting/common-problems.md">common-problems.md</a></td><td><a href="troubleshooting/known-issues.md">known-issues.md</a></td></tr></tbody></table>
 
-## Popular tasks
+## What YAPD helps you do ✨
 
-<table data-view="cards"><thead><tr><th></th><th data-type="content-ref"></th><th data-type="content-ref"></th><th data-type="content-ref"></th></tr></thead><tbody><tr><td><h4>For builders</h4></td><td><a href="getting-started/quickstart.md">quickstart.md</a></td><td><a href="getting-started/your-first-project.md">your-first-project.md</a></td><td><a href="guides/custom-domains.md">custom-domains.md</a></td></tr><tr><td><h4>For admins</h4></td><td><a href="core-concepts/permissions.md">permissions.md</a></td><td><a href="reference/configuration.md">configuration.md</a></td><td><a href="core-concepts/workspaces-and-projects.md">workspaces-and-projects.md</a></td></tr><tr><td><h4>For developers</h4></td><td><a href="guides/automations.md">automations.md</a></td><td><a href="reference/glossary.md">glossary.md</a></td><td><a href="reference/configuration.md">configuration.md</a></td></tr></tbody></table>
+* 👀 See consolidated Pi-hole activity across your instances.
+* 🧱 Keep groups, clients, domains, and ad-lists easier to compare and manage.
+* 🧭 Choose a global scope or inspect one Pi-hole at a time.
+* 🕵️ Review recent queries in **Queries Log**.
+* 📊 Import and analyze historical data in **Overview**.
+* 🔔 Track operational failures and Pi-hole messages in **Notifications**.
+* ⚙️ Review Pi-hole configuration topics and sync selected settings.
+* 🧪 Test and reauthenticate instances when credentials, certificates, or network paths change.
+
+## Main screens 🖥️
+
+![YAPD dashboard screenshot](.gitbook/assets/screenshots/dashboard.png)
+
+YAPD's sidebar is organized around **Overview**, **Operations**, and **Status**:
+
+* **Overview** (`/overview`): historical analysis stored in YAPD.
+* **Dashboard** (`/dashboard`): live consolidated Pi-hole metrics.
+* **Queries Log** (`/queries`): recent DNS activity and quick domain actions.
+* **Groups** (`/groups`), **Clients** (`/clients`), **Domains** (`/domains`), **Ad-lists** (`/lists`): Pi-hole objects managed across instances.
+* **Instances** (`/instances`): Pi-hole registration, testing, reauthentication, and baseline behavior.
+* **Configuration** (`/config`): Pi-hole settings by topic, Teleporter export, drift detection, and sync.
+* **Notifications** (`/notifications`): stored events, failures, and push notification controls.
