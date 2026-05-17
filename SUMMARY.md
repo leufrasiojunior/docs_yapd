@@ -25,3 +25,7 @@
 * [Reference](reference/reference.md)
 * [Configuration](reference/configuration.md)
 * [Glossary](reference/glossary.md)
+
+## Ajuda
+* [Format](Ajude-Me/format.md)
+* [Teste](Ajude-Me/teste.md)
