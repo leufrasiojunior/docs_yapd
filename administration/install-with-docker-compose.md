@@ -179,6 +179,10 @@ services:
 
 O PostgreSQL externo precisa estar acessível a partir do container do YAPD na porta `5432`. Se o banco usa outra porta, ajuste a porta no `DATABASE_URL` montado no bloco `command`.
 
+{% hint style="warning" %}
+Crie o banco manualmente antes de iniciar o YAPD. O nome do banco deve ser igual a `YAPD_POSTGRES_DB`, e `YAPD_POSTGRES_USER` precisa ter permissão para criar e atualizar tabelas nesse banco.
+{% endhint %}
+
 ```bash
 docker compose up -d
 ```
