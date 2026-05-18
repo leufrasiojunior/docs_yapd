@@ -179,6 +179,10 @@ services:
 
 The external PostgreSQL server must be reachable from the YAPD container on port `5432`. If your database uses another port, edit the port inside the `DATABASE_URL` built in the `command` block.
 
+{% hint style="warning" %}
+Create the database manually before starting YAPD. Its name must match `YAPD_POSTGRES_DB`, and `YAPD_POSTGRES_USER` must have permission to create and update tables in that database.
+{% endhint %}
+
 ```bash
 docker compose up -d
 ```
